@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+/* ─── Theme Tokens ─────────────────────────────────────────────────────────────
+   Change these 6 variables to switch the full app color theme.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root {
+  --th-primary:       #f97316;
+  --th-primary-dark:  #c2410c;
+  --th-primary-dim:   rgba(249, 115, 22, 0.10);
+  --th-primary-fg:    #1a0800;
+  --th-primary-glow:  rgba(249, 115, 22, 0.28);
+  --th-primary-border:rgba(249, 115, 22, 0.32);
+
+  /* Base palette */
+  --bg:         #080b12;
+  --bg2:        #0d1018;
+  --card:       rgba(255,255,255,0.05);
+  --card-solid: #11151f;
+  --card2:      rgba(255,255,255,0.08);
+  --border:     rgba(255,255,255,0.09);
+  --border2:    rgba(255,255,255,0.14);
+  --text:       #f0f4f8;
+  --text-sub:   #dde3ec;
+  --text-muted: #a0aab8;
+  --text-dim:   #64708a;
+  --text-faint: #2e3650;
+
+  --font-sans: 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius-card: 22px;
+  --radius-sm: 14px;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Liquid glass utility */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.glass-strong {
+  background: rgba(255,255,255,0.09);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.13);
+}
+
+.glass-orange {
+  background: rgba(249,115,22,0.10);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(249,115,22,0.28);
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
